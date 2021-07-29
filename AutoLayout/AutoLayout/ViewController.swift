@@ -17,6 +17,17 @@ class ViewController: UIViewController {
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
+    
+    let descriptionTextView: UITextView = {
+        let textView = UITextView()
+        textView.text = "Join us today in our fun and games!"
+        textView.font = UIFont.boldSystemFont(ofSize: 18)
+        textView.translatesAutoresizingMaskIntoConstraints = false
+        textView.textAlignment = .center
+        textView.isEditable = false
+        textView.isScrollEnabled = false
+        return textView
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +35,7 @@ class ViewController: UIViewController {
         
         // here's our entry point into our app
         view.addSubview(bearImageView)
+        view.addSubview(descriptionTextView)
         
         setupLayout()
         
@@ -35,6 +47,11 @@ class ViewController: UIViewController {
         bearImageView.topAnchor.constraint(equalTo: view.topAnchor, constant: 100).isActive = true
         bearImageView.widthAnchor.constraint(equalToConstant: 200).isActive = true
         bearImageView.heightAnchor.constraint(equalToConstant: 200).isActive = true
+        
+        descriptionTextView.topAnchor.constraint(equalTo: bearImageView.bottomAnchor, constant: 120).isActive = true
+        descriptionTextView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+        descriptionTextView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+        descriptionTextView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0).isActive = true
     }
 }
 
