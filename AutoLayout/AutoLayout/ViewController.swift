@@ -45,9 +45,8 @@ class ViewController: UIViewController {
 
     private func setupLayout() {
         let topImageContainerView = UIView()
-        topImageContainerView.backgroundColor = .blue
+//        topImageContainerView.backgroundColor = .blue
         view.addSubview(topImageContainerView)
-//        topImageContainerView.frame = CGRect(x: 0, y: 0, width: 100, height: 100)
         // enable auto layout
         topImageContainerView.translatesAutoresizingMaskIntoConstraints = false
         
@@ -64,12 +63,6 @@ class ViewController: UIViewController {
 //        topImageContainerView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
 //        topImageContainerView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
         topImageContainerView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.5).isActive = true
-        
-        
-//        bearImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-//        bearImageView.topAnchor.constraint(equalTo: view.topAnchor, constant: 100).isActive = true
-//        bearImageView.widthAnchor.constraint(equalToConstant: 200).isActive = true
-//        bearImageView.heightAnchor.constraint(equalToConstant: 200).isActive = true
         
         descriptionTextView.topAnchor.constraint(equalTo: topImageContainerView.bottomAnchor).isActive = true
         descriptionTextView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
