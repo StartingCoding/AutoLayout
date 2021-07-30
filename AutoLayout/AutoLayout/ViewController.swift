@@ -41,9 +41,31 @@ class ViewController: UIViewController {
     // make sure you apply the correct encapsulation principles in your classes
     private let previousButton: UIButton = {
         let button = UIButton(type: .system)
-        button.setTitle("Prev", for: .normal)
+        button.setTitle("PREV", for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
+        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 14)
+        button.setTitleColor(.gray, for: .normal)
         return button
+    }()
+    
+    private let nextButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.setTitle("NEXT", for: .normal)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 14)
+        let pinkColor = UIColor(red: 232/255, green: 68/255, blue: 133/255, alpha: 1)
+        button.setTitleColor(pinkColor, for: .normal)
+        return button
+    }()
+    
+    private let pageControl: UIPageControl = {
+        let pc = UIPageControl()
+        pc.currentPage = 0
+        pc.numberOfPages = 4
+        let pinkColor = UIColor(red: 232/255, green: 68/255, blue: 133/255, alpha: 1)
+        pc.currentPageIndicatorTintColor = pinkColor
+        pc.pageIndicatorTintColor = UIColor(red: 249/255, green: 207/255, blue: 224/255, alpha: 1)
+        return pc
     }()
 
     override func viewDidLoad() {
@@ -62,19 +84,18 @@ class ViewController: UIViewController {
     
     fileprivate func setupButtomControls() {
 //        view.addSubview(previousButton)
-        previousButton.backgroundColor = .red
 //        previousButton.frame = CGRect(x: 0, y: 0, width: 200, height: 50)
         
-        let yellowView = UIView()
-        yellowView.backgroundColor = .yellow
+//        let yellowView = UIView()
+//        yellowView.backgroundColor = .yellow
         
-        let greenView = UIView()
-        greenView.backgroundColor = .green
+//        let greenView = UIView()
+//        greenView.backgroundColor = .green
         
-        let blueView = UIView()
-        blueView.backgroundColor = .blue
+//        let blueView = UIView()
+//        blueView.backgroundColor = .blue
         
-        let bottomControlsStackView = UIStackView(arrangedSubviews: [yellowView, greenView, blueView])
+        let bottomControlsStackView = UIStackView(arrangedSubviews: [previousButton, pageControl, nextButton])
         bottomControlsStackView.translatesAutoresizingMaskIntoConstraints = false
         bottomControlsStackView.distribution = .fillEqually
 //        bottomControlsStackView.axis = .vertical
