@@ -71,7 +71,7 @@ class ViewController: UIViewController {
 //        bearImageView.widthAnchor.constraint(equalToConstant: 200).isActive = true
 //        bearImageView.heightAnchor.constraint(equalToConstant: 200).isActive = true
         
-        descriptionTextView.topAnchor.constraint(equalTo: bearImageView.bottomAnchor, constant: 120).isActive = true
+        descriptionTextView.topAnchor.constraint(equalTo: topImageContainerView.bottomAnchor).isActive = true
         descriptionTextView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
         descriptionTextView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
         descriptionTextView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0).isActive = true
