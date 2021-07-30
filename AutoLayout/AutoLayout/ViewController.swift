@@ -37,6 +37,14 @@ class ViewController: UIViewController {
         textView.isScrollEnabled = false
         return textView
     }()
+    
+    // make sure you apply the correct encapsulation principles in your classes
+    private let previousButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.setTitle("Prev", for: .normal)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        return button
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,10 +54,25 @@ class ViewController: UIViewController {
 //        view.addSubview(bearImageView)
         view.addSubview(descriptionTextView)
         
+        setupButtomControls()
+        
         setupLayout()
         
     }
-
+    
+    fileprivate func setupButtomControls() {
+        view.addSubview(previousButton)
+        previousButton.backgroundColor = .red
+//        previousButton.frame = CGRect(x: 0, y: 0, width: 200, height: 50)
+        
+        NSLayoutConstraint.activate([
+//            previousButton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            previousButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
+            previousButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
+            previousButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
+            previousButton.heightAnchor.constraint(equalToConstant: 50)
+        ])
+    }
 
     private func setupLayout() {
         let topImageContainerView = UIView()
