@@ -7,6 +7,10 @@
 
 import UIKit
 
+extension UIColor {
+    static var mainPink = UIColor(red: 232/255, green: 68/255, blue: 133/255, alpha: 1)
+}
+
 class ViewController: UIViewController {
     
     // let's avoid polluting viewDidLoad
@@ -53,8 +57,7 @@ class ViewController: UIViewController {
         button.setTitle("NEXT", for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 14)
-        let pinkColor = UIColor(red: 232/255, green: 68/255, blue: 133/255, alpha: 1)
-        button.setTitleColor(pinkColor, for: .normal)
+        button.setTitleColor(.mainPink, for: .normal)
         return button
     }()
     
@@ -62,8 +65,8 @@ class ViewController: UIViewController {
         let pc = UIPageControl()
         pc.currentPage = 0
         pc.numberOfPages = 4
-        let pinkColor = UIColor(red: 232/255, green: 68/255, blue: 133/255, alpha: 1)
-        pc.currentPageIndicatorTintColor = pinkColor
+//        let pinkColor = UIColor(red: 232/255, green: 68/255, blue: 133/255, alpha: 1)
+        pc.currentPageIndicatorTintColor = .mainPink
         pc.pageIndicatorTintColor = UIColor(red: 249/255, green: 207/255, blue: 224/255, alpha: 1)
         return pc
     }()
