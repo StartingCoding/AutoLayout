@@ -72,7 +72,6 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         // here's our entry point into our app
-//        view.addSubview(bearImageView)
         view.addSubview(descriptionTextView)
         
         setupButtomControls()
