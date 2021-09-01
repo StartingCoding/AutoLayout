@@ -9,6 +9,15 @@ import UIKit
 
 class SwipingController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     
+    let pages = [
+        Page(imageName: "bear_first", headerText: "Join us today in our fun and games!"),
+        Page(imageName: "heart_second", headerText: "Subscribe and get coupons on our daily events"),
+        Page(imageName: "leaf_third", headerText: "VIP members special services")
+    ]
+    
+//    let imageNames = ["bear_first", "heart_second", "leaf_third"]
+//    let headerStrings = ["Join us today in our fun and games!", "Subscribe and get coupons on our daily events", "VIP members special services"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -23,11 +32,19 @@ class SwipingController: UICollectionViewController, UICollectionViewDelegateFlo
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 4
+        return pages.count
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellId", for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellId", for: indexPath) as! PageCell
+        
+        let page = pages[indexPath.item]
+        cell.bearImageView.image = UIImage(named: page.imageName)
+        cell.descriptionTextView.text = page.headerText
+        
+//        let imageName = imageNames[indexPath.item]
+//        cell.bearImageView.image = UIImage(named: imageName)
+//        cell.descriptionTextView.text = headerStrings[indexPath.item]
         
         // definitely don't try this, it is a very bad idea
 //        let imageView = UIImageView()
