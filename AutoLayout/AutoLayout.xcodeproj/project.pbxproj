@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		AB3C815326DE0FB4006EC63C /* SwipingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3C815226DE0FB4006EC63C /* SwipingController.swift */; };
 		AB3C815526DE1706006EC63C /* PageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3C815426DE1706006EC63C /* PageCell.swift */; };
+		AB463BE226E37E320024EBE8 /* SwipingController+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB463BE126E37E320024EBE8 /* SwipingController+extension.swift */; };
+		AB463BE426E37ECE0024EBE8 /* SwipingController+UICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB463BE326E37ECE0024EBE8 /* SwipingController+UICollectionView.swift */; };
 		AB4D794726DFD21E00B5EBFE /* Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4D794626DFD21E00B5EBFE /* Page.swift */; };
 		ABF91CB1269481D30014CA5F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF91CB0269481D30014CA5F /* AppDelegate.swift */; };
 		ABF91CB3269481D30014CA5F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF91CB2269481D30014CA5F /* SceneDelegate.swift */; };
@@ -21,6 +23,8 @@
 /* Begin PBXFileReference section */
 		AB3C815226DE0FB4006EC63C /* SwipingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipingController.swift; sourceTree = "<group>"; };
 		AB3C815426DE1706006EC63C /* PageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageCell.swift; sourceTree = "<group>"; };
+		AB463BE126E37E320024EBE8 /* SwipingController+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SwipingController+extension.swift"; sourceTree = "<group>"; };
+		AB463BE326E37ECE0024EBE8 /* SwipingController+UICollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SwipingController+UICollectionView.swift"; sourceTree = "<group>"; };
 		AB4D794626DFD21E00B5EBFE /* Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page.swift; sourceTree = "<group>"; };
 		ABF91CAD269481D30014CA5F /* AutoLayout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AutoLayout.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABF91CB0269481D30014CA5F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +70,8 @@
 				ABF91CB2269481D30014CA5F /* SceneDelegate.swift */,
 				ABF91CB4269481D30014CA5F /* ViewController.swift */,
 				AB3C815226DE0FB4006EC63C /* SwipingController.swift */,
+				AB463BE126E37E320024EBE8 /* SwipingController+extension.swift */,
+				AB463BE326E37ECE0024EBE8 /* SwipingController+UICollectionView.swift */,
 				AB3C815426DE1706006EC63C /* PageCell.swift */,
 				AB4D794626DFD21E00B5EBFE /* Page.swift */,
 				ABF91CB6269481D30014CA5F /* Main.storyboard */,
@@ -146,6 +152,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB463BE426E37ECE0024EBE8 /* SwipingController+UICollectionView.swift in Sources */,
+				AB463BE226E37E320024EBE8 /* SwipingController+extension.swift in Sources */,
 				ABF91CB5269481D30014CA5F /* ViewController.swift in Sources */,
 				AB3C815526DE1706006EC63C /* PageCell.swift in Sources */,
 				AB4D794726DFD21E00B5EBFE /* Page.swift in Sources */,
